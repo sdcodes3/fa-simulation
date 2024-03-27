@@ -21,7 +21,7 @@ function GraphVisualization({ dot }) {
       });
   }, [dot]);
 
-  return <div ref={graphContainer} style={{maxWidth:"100%", border:"2px dotted black", padding:"1rem"}}></div>;
+  return <div ref={graphContainer} style={{maxWidth:"100%", height:'auto'}}></div>;
 }
 
 export default GraphVisualization;

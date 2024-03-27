@@ -15,14 +15,17 @@ const Home = () => {
             setGraphString(data.output_string);
           })
           .catch(error => console.error('Error fetching graph string:', error));
+          setAccepted(true)
       }, []);
     return (
         <div className='py-1'>
             <div className='fs-1 fw-bold text-center'>Thoc Innovative</div>
-            <div style={{display:'flex', padding:"1rem"}}>
+            <div className='d-flex flex-column flex-md-row flex-wrap p-3'>
                 <div className='d-flex flex-column col-6 align-items-center gap-3'>
                     <h2>Finite Automata</h2>
-                    <GraphVisualization dot={graphString} />
+                    <div style={{border:"2px dotted black", padding:"1rem"}}>
+                        <GraphVisualization dot={graphString} />
+                    </div>
                 </div>
                 <div className='d-flex flex-column col-6 align-items-center justify-content-between gap-3'>
                     <div className='d-flex flex-column justify-content-center gap-3'>
